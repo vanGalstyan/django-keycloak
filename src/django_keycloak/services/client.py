@@ -59,6 +59,14 @@ def get_uma1_client(client):
     return client.realm.realm_api_client.uma1
 
 
+def get_uma_client(client):
+    """
+    :type client: django_keycloak.models.Client
+    :rtype: keycloak.uma.KeycloakUMA
+    """
+    return client.realm.realm_api_client.uma
+
+
 def get_admin_client(client):
     """
     Get the Keycloak admin client configured for given realm.

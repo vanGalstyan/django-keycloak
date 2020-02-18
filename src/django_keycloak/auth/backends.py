@@ -82,7 +82,7 @@ class KeycloakAuthorizationBase(object):
                 'Keycloak: {}'.format(settings.KEYCLOAK_PERMISSIONS_METHOD)
             )
 
-    def has_perm(self, user_obj, perm, obj=None):
+    def has_permission(self, user_obj, perm, obj=None):
 
         if not user_obj.is_active:
             return False
